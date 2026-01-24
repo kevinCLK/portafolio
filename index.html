@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <title>Kevin | Full Stack Developer</title>
+</head>
+
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-white">
+
+  <!-- Header -->
+  <header
+    class="fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md bg-slate-900/80 border-b border-white/10"
+    id="header">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#"
+        class="text-2xl font-black bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">KVN.</a>
+
+      <nav class="hidden md:flex gap-8 font-medium">
+        <a href="#about" class="hover:text-cyan-400 transition-colors">Sobre mí</a>
+        <a href="#projects" class="hover:text-cyan-400 transition-colors">Proyectos</a>
+        <a href="#skills" class="hover:text-cyan-400 transition-colors">Habilidades</a>
+        <a href="#education" class="hover:text-cyan-400 transition-colors">Formación</a>
+        <a href="#contact" class="hover:text-cyan-400 transition-colors">Contacto</a>
+      </nav>
+
+      <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+      class="hidden md:hidden absolute top-full left-0 w-full bg-slate-900 border-b border-white/10 p-6 flex flex-col gap-4 text-center">
+      <a href="#about" class="block hover:text-cyan-400">Sobre mí</a>
+      <a href="#projects" class="block hover:text-cyan-400">Proyectos</a>
+      <a href="#skills" class="block hover:text-cyan-400">Habilidades</a>
+      <a href="#education" class="block hover:text-cyan-400">Formación</a>
+      <a href="#contact" class="block hover:text-cyan-400">Contacto</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-[100px]"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/20 rounded-full blur-[100px]"></div>
+      </div>
+
+      <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+        <p class="text-cyan-400 font-semibold tracking-wide mb-4 animate-fade-in-up">🔐 HOLA, SOY KEVIN CANAVIRI TORREZ</p>
+        <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight animate-fade-in-up delay-100">
+          Especialista en Infraestructura <br>
+          <span
+            class="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Tecnológica y Bases de Datos</span>
+        </h1>
+        <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 animate-fade-in-up delay-200">
+          Estudiante de Ingeniería de Sistemas enfocado en infraestructura, administración de servidores y ciberseguridad. Construyo y protejo sistemas robustos con énfasis en seguridad de datos y disponibilidad.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4 justify-center animate-fade-in-up delay-300">
+          <a href="#projects"
+            class="px-8 py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold rounded-full transition-all hover:scale-105 shadow-[0_0_20px_rgba(34,211,238,0.4)]">
+            Ver Proyectos
+          </a>
+          <a href="#contact"
+            class="px-8 py-3 border border-white/20 hover:bg-white/10 text-white font-semibold rounded-full transition-all hover:scale-105">
+            Descargar CV
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 md:py-32 bg-slate-800/50">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div class="relative group">
+          <div
+            class="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200">
+          </div>
+          <div
+            class="relative bg-slate-900 rounded-2xl p-8 border border-white/10 aspect-square flex items-center justify-center">
+            <!-- Placeholder for Profile Image -->
+            <span class="text-6xl">👨‍💻</span>
+          </div>
+        </div>
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 flex items-center gap-3">
+            <span class="w-8 h-1 bg-cyan-500 rounded-full"></span>
+            👨‍💻 Sobre Mí
+          </h2>
+          <p class="text-slate-300 leading-relaxed mb-6 text-lg">
+            Soy estudiante de Ingeniería de Sistemas en la Universidad Pública de El Alto, especializado en infraestructura tecnológica y ciberseguridad.
+          </p>
+          <p class="text-slate-300 leading-relaxed mb-4">
+            Mi enfoque está en:
+          </p>
+          <ul class="text-slate-300 leading-relaxed mb-6 space-y-2">
+            <li class="flex items-start gap-3"><span class="text-cyan-400 font-bold">•</span> Diseñar arquitecturas de bases de datos seguras y eficientes</li>
+            <li class="flex items-start gap-3"><span class="text-cyan-400 font-bold">•</span> Implementar controles de acceso y buenas prácticas de ciberseguridad</li>
+            <li class="flex items-start gap-3"><span class="text-cyan-400 font-bold">•</span> Administrar redes y servicios en entornos Linux</li>
+            <li class="flex items-start gap-3"><span class="text-cyan-400 font-bold">•</span> Desarrollar sistemas backend con énfasis en integridad de datos</li>
+          </ul>
+          <p class="text-slate-300 leading-relaxed mb-6">
+            Actualmente me encuentro formándome en protección de infraestructura crítica, gestión profesional con PostgreSQL y mitigación de amenazas informáticas.
+          </p>
+          <p class="text-slate-300 leading-relaxed">
+            Cuando no estoy estudiando o trabajando en proyectos, estoy explorando nuevas herramientas de seguridad, aprendiendo sobre arquitecturas escalables o investigando las últimas vulnerabilidades para entender cómo protegerse.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 md:py-32">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">🛠️ Mis Habilidades</h2>
+          <p class="text-slate-400">Tecnologías y herramientas que utilizo en proyectos de infraestructura.</p>
+        </div>
+
+        <!-- Base de Datos Section -->
+        <div class="mb-16">
+          <h3 class="text-2xl font-bold mb-8 text-cyan-400">[Base de Datos]</h3>
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-slate-800/50 p-8 rounded-xl border border-white/10 hover:border-cyan-500/50 transition-colors">
+              <h4 class="text-xl font-bold mb-4">🐘 PostgreSQL</h4>
+              <ul class="text-slate-300 space-y-2">
+                <li class="flex items-start gap-3"><span class="text-cyan-400">•</span> Diseño de esquemas relacionales</li>
+                <li class="flex items-start gap-3"><span class="text-cyan-400">•</span> Optimización de consultas</li>
+                <li class="flex items-start gap-3"><span class="text-cyan-400">•</span> Control de accesos y roles</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Infraestructura & Redes Section -->
+        <div class="mb-16">
+          <h3 class="text-2xl font-bold mb-8 text-cyan-400">[Infraestructura & Redes]</h3>
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-slate-800/50 p-8 rounded-xl border border-white/10 hover:border-purple-500/50 transition-colors">
+              <h4 class="text-xl font-bold mb-4">🌐 Redes</h4>
+              <ul class="text-slate-300 space-y-2">
+                <li class="flex items-start gap-3"><span class="text-cyan-400">•</span> Configuración LAN</li>
+                <li class="flex items-start gap-3"><span class="text-cyan-400">•</span> DNS, DHCP</li>
+                <li class="flex items-start gap-3"><span class="text-cyan-400">•</span> Protocolos IP</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desarrollo Section -->
+        <div class="mb-16">
+          <h3 class="text-2xl font-bold mb-8 text-cyan-400">[Desarrollo]</h3>
+          <div class="grid md:grid-cols-3 gap-8 mb-12">
+            <div class="bg-slate-800/50 p-8 rounded-xl border border-white/10 hover:border-yellow-500/50 transition-colors">
+              <h4 class="text-xl font-bold mb-4">🐍 Python</h4>
+              <ul class="text-slate-300 space-y-2">
+                <li class="flex items-start gap-3"><span class="text-cyan-400">•</span> Scripting y automatización</li>
+                <li class="flex items-start gap-3"><span class="text-cyan-400">•</span> Backend con Flask</li>
+                <li class="flex items-start gap-3"><span class="text-cyan-400">•</span> Procesamiento de datos</li>
+              </ul>
+            </div>
+            <div class="bg-slate-800/50 p-8 rounded-xl border border-white/10 hover:border-blue-500/50 transition-colors">
+              <h4 class="text-xl font-bold mb-4">💻 PHP</h4>
+              <ul class="text-slate-300 space-y-2">
+                <li class="flex items-start gap-3"><span class="text-cyan-400">•</span> Desarrollo backend</li>
+                <li class="flex items-start gap-3"><span class="text-cyan-400">•</span> CRUD operations</li>
+                <li class="flex items-start gap-3"><span class="text-cyan-400">•</span> Integración con bases de datos</li>
+              </ul>
+            </div>
+            <div class="bg-slate-800/50 p-8 rounded-xl border border-white/10 hover:border-purple-500/50 transition-colors">
+              <h4 class="text-xl font-bold mb-4">🎨 Frontend Básico</h4>
+              <ul class="text-slate-300 space-y-2">
+                <li class="flex items-start gap-3"><span class="text-cyan-400">•</span> HTML, CSS, JavaScript</li>
+                <li class="flex items-start gap-3"><span class="text-cyan-400">•</span> Bootstrap</li>
+                <li class="flex items-start gap-3"><span class="text-cyan-400">•</span> Interfaces funcionales</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Control de Versiones Section -->
+        <div>
+          <h3 class="text-2xl font-bold mb-8 text-cyan-400">[Control de Versiones]</h3>
+          <div class="bg-slate-800/50 p-8 rounded-xl border border-white/10 hover:border-gray-500/50 transition-colors max-w-md">
+            <h4 class="text-xl font-bold mb-4">📦 Git/GitHub</h4>
+            <ul class="text-slate-300 space-y-2">
+              <li class="flex items-start gap-3"><span class="text-cyan-400">•</span> Versionamiento de código</li>
+              <li class="flex items-start gap-3"><span class="text-cyan-400">•</span> Colaboración en proyectos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 md:py-32 bg-slate-800/30">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Proyectos en Producción -->
+        <div>
+          <div class="flex justify-between items-end mb-12">
+            <div>
+              <h2 class="text-3xl md:text-4xl font-bold mb-2">Mis Proyectos</h2>
+              <p class="text-slate-400">Aplicaciones desplegadas y en vivo.</p>
+            </div>
+          </div>
+
+          <div id="deployed-projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Deployed projects will be loaded dynamically via JS -->
+            <div class="col-span-full text-center text-slate-500 animate-pulse">
+              Cargando proyectos...
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 md:py-32">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center">🎓 Formación & Certificaciones</h2>
+        
+        <!-- Academic Section -->
+        <div class="mb-16">
+          <h3 class="text-2xl font-bold mb-8 text-cyan-400">Formación Académica</h3>
+          <div class="bg-slate-800/50 p-8 rounded-xl border border-cyan-500/30 hover:border-cyan-500/50 transition-colors">
+            <h4 class="text-xl font-bold text-white mb-2">Ingeniería de Sistemas</h4>
+            <p class="text-cyan-400 font-semibold mb-2">Universidad Pública de El Alto | En curso</p>
+            <p class="text-slate-300">Especialización en infraestructura tecnológica y servidores</p>
+          </div>
+        </div>
+
+        <!-- Certifications Section -->
+        <div>
+          <h3 class="text-2xl font-bold mb-8 text-cyan-400">📜 Certificaciones</h3>
+          <div class="grid md:grid-cols-1 gap-6">
+            <div class="bg-slate-800/50 p-8 rounded-xl border border-white/10 hover:border-cyan-500/50 transition-colors">
+              <h4 class="text-xl font-bold text-white mb-2">Seguridad en Bases de Datos</h4>
+              <p class="text-cyan-400 font-semibold mb-3">Universidad Pública de El Alto | Agosto 2025</p>
+              <p class="text-slate-300">Formación en protección de infraestructura de red, control de accesos, amenazas informáticas y buenas prácticas de ciberseguridad.</p>
+            </div>
+            <div class="bg-slate-800/50 p-8 rounded-xl border border-white/10 hover:border-blue-500/50 transition-colors">
+              <h4 class="text-xl font-bold text-white mb-2">Seguridad en Redes</h4>
+              <p class="text-blue-400 font-semibold mb-3">Universidad Pública de El Alto | Agosto 2025</p>
+              <p class="text-slate-300">Capacitación en protección de información, control de usuarios, respaldo, auditoría y mitigación de vulnerabilidades en sistemas gestores de bases de datos.</p>
+            </div>
+            <div class="bg-slate-800/50 p-8 rounded-xl border border-white/10 hover:border-purple-500/50 transition-colors">
+              <h4 class="text-xl font-bold text-white mb-2">Gestión Profesional con PostgreSQL</h4>
+              <p class="text-purple-400 font-semibold mb-3">Universidad Pública de El Alto | Junio 2025</p>
+              <p class="text-slate-300">Administración avanzada de bases de datos PostgreSQL, optimización de consultas, respaldo y recuperación de datos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 md:py-32">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8">¿Listo para trabajar juntos?</h2>
+        <p class="text-slate-400 mb-10 text-xl">
+          Actualmente estoy disponible para nuevos proyectos. <br>
+          ¡Construyamos algo increíble!
+        </p>
+        <a href="mailto:kvnzldrs@gmail.com"
+          class="inline-block px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-full text-lg shadow-lg hover:shadow-cyan-500/50 transition-all hover:scale-105">
+          Envíame un correo
+        </a>
+
+        <div class="mt-16 flex justify-center gap-8 text-slate-400">
+          <a href="https://github.com/kvnzl" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-slate-900 border-t border-white/5 text-center text-slate-600 text-sm">
+      <p>&copy; 2026 Kevin. Todos los derechos reservados.</p>
+    </footer>
+  </main>
+
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

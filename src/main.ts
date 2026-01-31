@@ -147,7 +147,7 @@ const deployedProjects: DeployedProject[] = [
   {
     name: 'TripGenius',
     description: 'Plataforma inteligente de planificación de viajes con IA, integración de APIs de vuelos, gestión de reservas y recomendaciones personalizadas. Backend en Flask con SQLAlchemy, arquitectura MVC escalable.',
-    url: 'https://tripgenius.vercel.app/',
+    url: 'https://proyect-emergentes.vercel.app/',
     language: 'Python',
     topics: ['flask', 'ia', 'full-stack'],
     github: ''

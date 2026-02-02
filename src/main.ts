@@ -103,6 +103,7 @@ interface DeployedProject {
   technologies?: string[];
   features?: string[];
   challenges?: string[];
+  credentials?: { role: string; user: string; password: string }[];
 }
 
 const deployedProjectsGrid = document.getElementById('deployed-projects-grid');
@@ -142,6 +143,15 @@ const deployedProjects: DeployedProject[] = [
       'Arquitectura limpia separando lógica de negocio y UI',
       'Migración segura de Next.js para cumplir estándares de seguridad',
       'Implementación de relaciones complejas en Prisma con borrado lógico'
+    ],
+    credentials: [
+      { role: 'Administrador', user: 'admin@clinica.com', password: 'admin123' },
+      { role: 'Doctor', user: 'dr.vargas@clinica.com', password: 'doctor123' },
+      { role: 'Doctor', user: 'dra.morales@clinica.com', password: 'doctor123' },
+      { role: 'Doctor', user: 'dr.ruiz@clinica.com', password: 'doctor123' },
+      { role: 'Paciente', user: 'paciente1@email.com', password: 'doctor123' },
+      { role: 'Paciente', user: 'paciente2@email.com', password: 'doctor123' },
+      { role: 'Paciente', user: 'paciente3@email.com', password: 'doctor123' }
     ]
   },
   {
@@ -150,7 +160,10 @@ const deployedProjects: DeployedProject[] = [
     url: 'https://proyect-emergentes.vercel.app/',
     language: 'Python',
     topics: ['flask', 'ia', 'full-stack'],
-    github: ''
+    github: '',
+    credentials: [
+      { role: 'Administrador', user: 'admin@tripgenius.com', password: 'Admin1234' }
+    ]
   },
   // Añade más proyectos desplegados aquí
 ];
@@ -177,7 +190,7 @@ function createDeployedProjectCard(project: DeployedProject): HTMLDivElement {
     ? project.topics.slice(0, 3).map(topic => `<span class="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded font-medium">${topic}</span>`).join('')
     : '';
 
-  const hasDetails = project.fullDescription || project.technologies || project.features || project.challenges;
+  const hasDetails = project.fullDescription || project.technologies || project.features || project.challenges || (project.credentials && project.credentials.length > 0);
   const projectId = `project-${project.name.toLowerCase().replace(/\s+/g, '-')}`;
 
   card.innerHTML = `
@@ -254,6 +267,33 @@ function showProjectModal(project: DeployedProject) {
       </div>`
     : '';
 
+  const credentialsHTML = project.credentials && project.credentials.length > 0
+    ? `<div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-emerald-400">🔐 Credenciales para iniciar sesión</h4>
+        <p class="text-slate-400 text-sm mb-3">Usa estas credenciales para probar el proyecto en modo demo.</p>
+        <div class="overflow-x-auto rounded-lg border border-white/10">
+          <table class="w-full text-sm text-left">
+            <thead class="bg-slate-800/50 text-slate-300">
+              <tr>
+                <th class="px-4 py-3 font-semibold">Rol</th>
+                <th class="px-4 py-3 font-semibold">Usuario / Email</th>
+                <th class="px-4 py-3 font-semibold">Contraseña</th>
+              </tr>
+            </thead>
+            <tbody class="text-slate-300">
+              ${project.credentials.map(c => `
+                <tr class="border-t border-white/5 hover:bg-slate-800/30">
+                  <td class="px-4 py-3 font-medium text-emerald-400">${c.role}</td>
+                  <td class="px-4 py-3"><code class="bg-slate-800 px-2 py-1 rounded text-cyan-300">${c.user}</code></td>
+                  <td class="px-4 py-3"><code class="bg-slate-800 px-2 py-1 rounded text-amber-300">${c.password}</code></td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      </div>`
+    : '';
+
   overlay.innerHTML = `
     <div class="bg-slate-900 rounded-2xl border border-white/20 max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
       <div class="p-8">
@@ -270,6 +310,7 @@ function showProjectModal(project: DeployedProject) {
         ${technologiesHTML}
         ${featuresHTML}
         ${challengesHTML}
+        ${credentialsHTML}
         
         <div class="flex gap-4 mt-8 pt-6 border-t border-white/10">
           <a href="${project.url}" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-lg transition-colors flex items-center gap-2">
